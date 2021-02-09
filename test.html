@@ -20,7 +20,7 @@
 
 $(function(){
 
-$.getJSON("da.json",function(data){
+$.getJSON("https://api.github.com/repos/huolongguo10/utest/issues",function(data){
 
 var $jsontip = $("#ok");
 
@@ -30,7 +30,7 @@ $jsontip.empty();//清空内容
 
 $.each(data,function(infoIndex,info){
 
-    strHtml += "<a href='" + info["url"] + "' target='_blank'><img src='" + info["img"] + "' /></a>";
+    strHtml += "<a href='" + info["title"] + "' target='_blank'>test</a>";
 
 })
 
