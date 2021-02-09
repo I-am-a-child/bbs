@@ -25,12 +25,13 @@ $.getJSON("https://api.github.com/repos/huolongguo10/utest/issues",function(data
 var $jsontip = $("#ok");
 
 var strHtml = "";//存储数据的变量
-
+var data= info["title"];
+var str = data.split('?');
 $jsontip.empty();//清空内容
 
 $.each(data,function(infoIndex,info){
 
-    strHtml += "<a href='" + info["title"] + "' target='_blank'>test</a>";
+    strHtml += "<a href='" + info["title"] + "' target='_blank'>"+str[1]+"</a>";
 
 })
 
@@ -39,7 +40,8 @@ $jsontip.html(strHtml);//显示处理后的数据
 })
 
 })
-
+var data= "烈日当头已数月有余，天气高温，汗流浃背，不知所言。";
+var str = data.split(',');
 </script>
 
 </body>
