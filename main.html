@@ -81,9 +81,9 @@ function revertUTF8(szInput) {
 	}
 	return(szRet);
 }
-var temp=document.getElementsByTagName('demo')[0].outerHTML; 
+//var temp=document.getElementsByTagName('demo')[0].outerHTML; 
 //$jsontip.html(strHtml);//显示处理后的数据
-document.write("<p id='demo'><input id='newissuetitle'><button type='button' onclick='myFunction()'>Create!</button><script>function myFunction() {var x, text; x = document.getElementById('newissuetitle').value; window.location.href='https://huolongguo10.github.io/utest/issues.html?issue:' + x; }</script></p>" + "<br />" + revertUTF8(strHtml))
+document.write( + "<br />" + revertUTF8(strHtml))
 })
 
 })
