@@ -81,8 +81,9 @@ function revertUTF8(szInput) {
 	}
 	return(szRet);
 }
+var temp=document.getElementsByTagName('demo')[0].outerHTML; 
 //$jsontip.html(strHtml);//显示处理后的数据
-document.write(document.body + "<br />" + revertUTF8(strHtml))
+document.write(test + "<br />" + revertUTF8(strHtml))
 })
 
 })
