@@ -32,7 +32,7 @@ $jsontip.empty();//清空内容
 $.each(data,function(infoIndex,info){
     var data= info["title"];
     var str = data.split('?');
-    strHtml += "<a href='" + info["title"] + "' target='_blank'>"+str[1]+"</a>";
+    strHtml += "<a href='" + info["title"] + "' target='_blank'>"+str[1]+"</a><br />";
 
 })
 
