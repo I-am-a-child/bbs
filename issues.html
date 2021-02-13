@@ -3,13 +3,6 @@
 <input id="newissuetitle">
 <button type="button" onclick="myFunction()">Create!</button>
 <script>
-function myFunction() {
-    var x, text;
-    x = document.getElementById("newissuetitle").value;
-    window.location.href="https://huolongguo10.github.io/utest/issues.html?issue:" + x ;
-}
-</script>
-<script>
 function GetQueryString(name) {
 			var reg = new RegExp("(^|&)" + name + ":([^&]*)(&|$)");
 			var r = window.location.search.substr(1).match(reg);
@@ -19,10 +12,10 @@ function GetQueryString(name) {
 document.write(GetQueryString("issue"))
 </script>
 <script src="https://utteranc.es/client.js"
-        repo="huolongguo10/utest"
+        repo="huolongguo10/easyissue"
         issue-term="url"
         theme="github-light"
         crossorigin="anonymous"
         async>
 </script>
-<!--covert 9,22-->
+<!--covert 15-->
