@@ -1,2 +1,3 @@
 # easyissue
 简单的issues
+注意把huolongguo10换成你的用户名，easyisssue换成仓库名
