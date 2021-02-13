@@ -1,54 +1,29 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 <html xmlns="http://www.w3.org/1999/xhtml">
-
 <head>
-
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
 <title>main</title>
-
 <script type="text/javascript" src="//www.jb51.net/jslib/jquery/jquery.min.js"></script>
-
 </head>
-
 <body>
-<p id="demo">
-<input id="newissuetitle">
-
-<button type="button" onclick="myFunction()">Create!</button>
-
-<!--<p id="demo"></p>-->
-
 <script>
 function myFunction() {
     var x, text;
-
-    
     x = document.getElementById("newissuetitle").value;
-
-    window.location.href="https://huolongguo10.github.io/utest/issues.html?issue:" + x
+    window.location.href="https://huolongguo10.github.io/issue/issues.html?issue:" + x ;
 }
 </script>
 </p>
 <script>
-
 $(function(){
-
-$.getJSON("https://api.github.com/repos/huolongguo10/utest/issues",function(data){
-
+$.getJSON("https://api.github.com/repos/huolongguo10/easyissue/issues",function(data){
 var $jsontip = $("#ok");
-
-var strHtml = "";//存储数据的变量
-//var data= info["title"];
-//var str = data.split('?');
-$jsontip.empty();//清空内容
-
+var strHtml = "";
+$jsontip.empty();
 $.each(data,function(infoIndex,info){
     var data= info["title"];
     var str = data.split(':');
     strHtml += "<a href='" + info["title"] + "' target='_blank'>"+str[2]+"</a><br />";
-
 })
 function revertUTF8(szInput) {
 	var x,wch,wch1,wch2,uch="",szRet="";
@@ -81,17 +56,11 @@ function revertUTF8(szInput) {
 	}
 	return(szRet);
 }
-//var temp=document.getElementsByTagName('demo')[0].outerHTML; 
-//$jsontip.html(strHtml);//显示处理后的数据
-document.write( "<br />" + revertUTF8(strHtml)+"<br />" +"<br />" +"<a href='https://huolongguo10.github.io/utest/ci.html'>You can create an issue here.</a>")
-//document.all.paral.insertAdjacentHTML("afterEnd",strHtml);  
+document.write( "<br />" + revertUTF8(strHtml)+"<br />" +"<br />" +"<a href='https://huolongguo10.github.io/easyissue/ci.html'>You can create an issue here.</a>")
 })
 
 })
-//var data= "烈日当头已数月有余，天气高温，汗流浃背，不知所言。";
-//var str = data.split(',');
 </script>
-
 </body>
-
 </html>
+<!--covert 13,19,59-->
